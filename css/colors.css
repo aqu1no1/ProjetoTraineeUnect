@@ -1,0 +1,16 @@
+:root {
+  --blue200: #e2f5fa;
+  --blue300: #c7ebfb;
+  --blue400: #89c5d5;
+  --blue500: #7ccbe0;
+  --blue600: #63b3c9;
+  --blue1000: #0f637a;
+  --blue1100: #063643;
+
+  --border-color: #06364380;
+
+  --white-base: #f8f8ff;
+  --white-soft: #fafdff;
+
+  --gray: #9e9e9e;
+}
