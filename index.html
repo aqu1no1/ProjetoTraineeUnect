@@ -4,96 +4,168 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts.js" defer></script>
+
     <title>Document</title>
   </head>
+
   <body>
+    <!-- Header -->
+    <header>
+      <button id="open-sidebar-button" onclick="openSideBar()">
+        <img src="/image/icon/Menu.png" alt="Abrir menu" />
+      </button>
+      <div class="logo-img">
+        <img
+          src="/image/logo/logo-pindorama.png"
+          alt="Pindorama Pets"
+          class="logo"
+        />
+      </div>
+    </header>
     <!-- Navegação -->
-    <nav>
+    <nav id="navbar">
+      <div class="nav-img">
+        <img src="/image/icon/Logo-horizontal.png" />
+      </div>
       <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Serviços</a></li>
-        <li><a href="#">Sobre nós</a></li>
-        <li><a href="#">Contatos</a></li>
+        <li class="btnclose">
+          <button id="close-sidebar-button" onclick="closeSideBar()">
+            <img src="/image/icon/x_.png" alt="Menu" />
+          </button>
+        </li>
+        <li class="li-inicio"><a href="#">Início</a></li>
+        <li class="li-servico"><a href="#">Serviços</a></li>
+        <li class="li-sobre"><a href="#">Sobre nós</a></li>
+        <li class="li-contatos"><a href="#">Contatos</a></li>
       </ul>
     </nav>
-
-    <!-- Logo -->
-    <img class="img_logo" src="" alt="Logo Pindorama" />
-
     <main>
-      <!-- Banner Principal -->
-      <section class="banner_center">
-        <div class="texto_banner_center">
-          <h2>
-            Cuidando do Seu Pet com <br />
-            Profissionalismo e Carinho
-          </h2>
+      <!-- Parte Principal do desktop -->
+      <section class="first-section-desktop">
+        <div class="contact-desktop">
+          <div class="title-contact-desktop">
+            <h3>Cuidando do Seu Pet com <br />Profissionalismo e Carinho</h3>
+            <button>Entre em contato</button>
+          </div>
+          <div class="img-contact">
+            <img
+              height="260px"
+              width="717px"
+              src="/image/animal/alot_of_cats_dogs.png"
+              alt="muitos animais"
+            />
+            <img
+              height="200px"
+              width="200px"
+              src="/image/icon/Waveform.png"
+              alt="ondas"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="campanhas">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="carousel-first">
+                <img src="/image/animal/pata.png" alt="pata" />
+                <img src="image/icon/seringa.png" alt="seringa" />
+                <img src="/image/animal/pata.png" alt="pata" />
+                <h1>Campanha de vacinação</h1>
+                <h2>Nos dias 19 a 28 de novembro</h2>
+                <button>Saiba mais</button>
+                <img src="/image/animal/cat.png" alt="gato" />
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="carousel-secound">
+                <h1>Campanha de adoção</h1>
+                <h2>
+                  Dê um lar cheio de amor a quem só quer te fazer feliz!<br />
+                  Adote um amigo de quatro patas e transforme sua <br />
+                  vida e a dele.
+                </h2>
+                <button>Saiba mais</button>
+                <img src="image/animal/dog golden.png" alt="cachorro" />
+                <img src="/image/animal/gato hidden.png" alt="gato" />
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="carousel-third">
+                <img src="image/icon/guarda chuva.png" alt="guarda-chuva" />
+                <h1>Banho e tosa: cuidado e saúde para seu pet</h1>
+                <h2>
+                  Nossa clínica dispõe do serviço de higiene para seu Pet <br />
+                  permanecer limpo, cheiroso e longe de parasitas.
+                </h2>
+                <button>Saiba mais</button>
+                <img src="image/background-img/rain.png" alt="chuva" />
+                <img src="/image/animal/gato banho.png" alt="gato banho" />
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="button_contato">
-          <a href="#">Entre em contato</a>
-        </div>
-
-        <div class="img_banner_center">
-          <img src="" alt="Imagens de animais" />
+        <!-- Controles -->
+        <div class="swiper-controls">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </section>
 
-      <!-- Carrossel de Campanhas -->
-      <section class="carrosel_campanha">
-        <!-- Slide 1 -->
-        <div class="texto_vacinacao">
-          <h2>Campanha de Vacinação</h2>
-          <p>Nos dias 19 a 28 de novembro</p>
+      <!-- Swiper CSS -->
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+      <!-- Parte Principal do mobile -->
+      <section class="first-section-mobile">
+        <div class="title-first-section">
+          <h2>Cuidamos do seu animal com muito amor</h2>
         </div>
-
-        <!-- Slide 2 -->
-        <div class="texto_adocao">
-          <h2>Campanha de Adoção</h2>
-          <p>
-            Dê um lar cheio de amor a quem só quer te fazer feliz!<br />
-            Adote um amigo de quatro patas e transforme sua<br />
-            vida e a dele.
-          </p>
+        <div class="img-animals">
+          <img
+            src="image/animal/alot_of_cats_dogs.png"
+            alt="muitos cachorros e gatos"
+          />
         </div>
-
-        <!-- Slide 3 -->
-        <div class="texto_banhoetosa">
-          <h2>Banho e Tosa: cuidado e saúde para seu pet</h2>
-          <p>
-            Nossa clínica dispõe do serviço de higiene para seu pet<br />
-            permanecer limpo, cheiroso e longe de parasitas.
-          </p>
+        <div class="img-background">
+          <img src="image/background-img/Ellipse 5.png" alt="elipse" />
         </div>
-
-        <div class="button_saiba_mais">
-          <a href="#">Saiba mais</a>
-        </div>
+        <button>Entre em contato</button>
       </section>
-
       <!-- Conteúdo Principal -->
       <section class="content">
         <div class="about-us">
           <div class="about-us-desktop">
-            <h2>Quem Somos?</h2>
-            <p>
-              Nossa clínica veterinária é comprometida com o cuidado e
-              bem-estar<br />
-              de cada pet. Com uma equipe dedicada e instalações modernas,<br />
-              buscamos garantir saúde e conforto em cada atendimento.<br />
-              Cuidamos do seu animalzinho como se fosse nosso!
-            </p>
-            <img src="" alt="Logo Pindorama" />
+            <img src="image/icon/logo-who.png" alt="Logo Pindorama" />
+            <div class="content-text-desktop">
+              <h2>Quem Somos?</h2>
+              <p>
+                Nossa clínica veterinária é comprometida com o cuidado e
+                bem-estar<br />
+                de cada pet. Com uma equipe dedicada e instalações modernas,<br />
+                buscamos garantir saúde e conforto em cada atendimento.<br />
+                Cuidamos do seu animalzinho como se fosse nosso!
+              </p>
+            </div>
           </div>
-
           <div class="about-us-mobile">
-            <div class="title-about-us"><h2>Quem Somos?</h2></div>
-
-            <img src="image/icon/dog.png" alt="Logo Pindorama" />
-            <img
-              src="image/pindorama name/Pindorama PETS.png"
-              alt="Pindorama nome"
-            />
+            <div class="title-about-us">
+              <h2>Quem Somos?</h2>
+            </div>
+            <div class="img-mobile">
+              <img src="image/icon/dog.png" alt="Logo Pindorama" />
+              <img
+                src="image/pindorama name/Pindorama PETS.png"
+                alt="Pindorama nome"
+              />
+            </div>
             <div class="section-main">
               <p>
                 Nossa clínica veterinária é comprometida com o cuidado e
@@ -107,7 +179,6 @@
             </div>
           </div>
         </div>
-
         <div class="our-services">
           <div class="content-services-mobile">
             <div class="title-service">
@@ -118,7 +189,6 @@
               dedicação e atenção aos detalhes, garantindo o melhor cuidado para
               o seu pet.
             </p>
-
             <button>Agenda uma consulta</button>
             <div class="cat-services">
               <img
@@ -128,8 +198,14 @@
             </div>
           </div>
           <div class="content-services-desktop">
-            <div class="title-service"><h2>Nossos Serviços</h2></div>
-            <div class="content-desktop">
+            <div class="content-desktop-first">
+              <div>
+                <h2>Nossos Serviços</h2>
+                <img
+                  src="image/doctors/Medicina-Veterinaria 1.png"
+                  alt="Médica e cachorro"
+                />
+              </div>
               <p>
                 Na nossa clínica veterinária, cada consulta é realizada com
                 dedicação<br />
@@ -138,11 +214,9 @@
                 Contamos com uma equipe experiente e atualizada para oferecer<br />
                 diagnósticos precisos e tratamentos eficazes.
               </p>
-              <div class="img-service">
-                <img src="" alt="Médica e cachorro" />
-              </div>
+              <div class="img-service"></div>
             </div>
-            <div class="content-desktop">
+            <div class="content-desktop-second">
               <p>
                 Nós cuidamos do seu pet com o carinho e respeito que ele
                 merece.<br />
@@ -151,20 +225,19 @@
                 em<br />
                 casa.
               </p>
-              <div class="img-service">
-                <img src="" alt="Médica e cachorro" />
-              </div>
+              <img
+                src="image/doctors/Medicina-Veterinaria 2.png"
+                alt="Médica e cachorro"
+              />
             </div>
           </div>
         </div>
       </section>
-
       <!-- Profissionais -->
       <section class="professionals">
         <div class="title-our-professionals">
           <h2>Nossos Profissionais</h2>
         </div>
-
         <div class="display-doctors">
           <article class="doctor">
             <img
@@ -174,7 +247,6 @@
             <h3>Carlos de Souza</h3>
             <p>Cirurgia Veterinária</p>
           </article>
-
           <article class="doctor">
             <img
               src="/image/doctors/doctor 2.jpg"
@@ -183,7 +255,6 @@
             <h3>João Paulo</h3>
             <p>Dermatologia Veterinária</p>
           </article>
-
           <article class="doctor">
             <img
               src="/image/doctors/doctor 3.jpg"
@@ -192,7 +263,6 @@
             <h3>José da Silva</h3>
             <p>Patologia</p>
           </article>
-
           <article class="doctor">
             <img
               src="/image/doctors/doctor 4.jpg"
@@ -203,140 +273,247 @@
           </article>
         </div>
       </section>
-
-      <!-- Avaliações  Desktop-->
-      <section class="avaliacoesDesktop">
-        <h3>Avaliações (34)</h3>
-      </section>
-      I
-      <!-- Avaliações Mobile -->
-      <section class="avaliacoesMobile">
-        <div class="title-avaliacoes-mobile">
-          <h3>Avaliações (9)</h3>
+      <!-- Avaliações -->
+      <section class="avaliacoes">
+        <div class="title-avaliacoes">
+          <h3>Avaliações (<span id="count"></span>)</h3>
         </div>
-
-        <div class="person-rating">
-          <div class="person-img">
-            <img src="image/users/man 1.jpg" alt="Foto de Carlos Alberto" />
+        <div class="avaliacoes-container">
+          <!-- Suas avaliações -->
+          <div class="person-rating">
+            <div class="person-img">
+              <img src="image/users/man 1.jpg" alt="Foto de Carlos Alberto" />
+            </div>
+            <div class="rating-content">
+              <div class="rating-stars">
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+              </div>
+              <div class="name-rating">
+                <h6>Carlos Alberto</h6>
+              </div>
+              <div class="info-person-rating">
+                <p>Atendimento excepcional! A equipe foi muito cuidadosa.</p>
+              </div>
+            </div>
           </div>
-
-          <div class="rating-content">
-            <div class="rating-stars">
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+          <div class="person-rating">
+            <div class="person-img">
+              <img src="image/users/man 2.jpg" alt="Foto de Neymar" />
             </div>
-
-            <div class="name-rating">
-              <h6>Carlos Alberto</h6>
+            <div class="rating-content">
+              <div class="rating-stars">
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+              </div>
+              <div class="name-rating">
+                <h6>Neymar Jr</h6>
+              </div>
+              <div class="info-person-rating">
+                <p>
+                  Serviço excelente, profissionais qualificados e atenciosos.
+                </p>
+              </div>
             </div>
-
-            <div class="info-person-rating">
-              <p>
-                Atendimento excepcional! A equipe foi muito cuidadosa e
-                atenciosa com meu pet.
-              </p>
+          </div>
+          <div class="person-rating">
+            <div class="person-img">
+              <img
+                src="image/users/woman 1.png"
+                alt="Foto de Josseana da Silva"
+              />
+            </div>
+            <div class="rating-content">
+              <div class="rating-stars">
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+              </div>
+              <div class="name-rating">
+                <h6>Josseana da Silva</h6>
+              </div>
+              <div class="info-person-rating">
+                <p>Excelente clínica! Atendimento profissional e gentil.</p>
+              </div>
+            </div>
+          </div>
+          <div class="person-rating">
+            <div class="person-img">
+              <img
+                src="image/users/woman 1.png"
+                alt="Foto de Josseana da Silva"
+              />
+            </div>
+            <div class="rating-content">
+              <div class="rating-stars">
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+              </div>
+              <div class="name-rating">
+                <h6>Josseana da Silva</h6>
+              </div>
+              <div class="info-person-rating">
+                <p>Excelente clínica! Atendimento profissional e gentil.</p>
+              </div>
+            </div>
+          </div>
+          <div class="person-rating">
+            <div class="person-img">
+              <img src="image/users/man 2.jpg" alt="Foto de Neymar" />
+            </div>
+            <div class="rating-content">
+              <div class="rating-stars">
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+              </div>
+              <div class="name-rating">
+                <h6>Neymar Jr</h6>
+              </div>
+              <div class="info-person-rating">
+                <p>
+                  Serviço excelente, profissionais qualificados e atenciosos.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="person-rating">
+            <div class="person-img">
+              <img src="image/users/man 1.jpg" alt="Foto de Carlos Alberto" />
+            </div>
+            <div class="rating-content">
+              <div class="rating-stars">
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+              </div>
+              <div class="name-rating">
+                <h6>Carlos Alberto</h6>
+              </div>
+              <div class="info-person-rating">
+                <p>Atendimento excepcional! A equipe foi muito cuidadosa.</p>
+              </div>
+            </div>
+          </div>
+          <div class="person-rating">
+            <div class="person-img">
+              <img src="image/users/man 1.jpg" alt="Foto de Carlos Alberto" />
+            </div>
+            <div class="rating-content">
+              <div class="rating-stars">
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+                <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
+              </div>
+              <div class="name-rating">
+                <h6>Carlos Alberto</h6>
+              </div>
+              <div class="info-person-rating">
+                <p>Atendimento excepcional! A equipe foi muito cuidadosa.</p>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="person-rating">
-          <div class="person-img">
-            <img src="image/users/man 2.jpg" alt="Foto de Neymar" />
-          </div>
-
-          <div class="rating-content">
-            <div class="rating-stars">
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-            </div>
-
-            <div class="name-rating">
-              <h6>Neymar Jr</h6>
-            </div>
-
-            <div class="info-person-rating">
-              <p>
-                Não poderia estar mais feliz com o serviço desta clínica.
-                Profissionais qualificados e atenciosos.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="person-rating">
-          <div class="person-img">
-            <img
-              src="image/users/woman 1.png"
-              alt="Foto de Josseana da Silva"
-            />
-          </div>
-
-          <div class="rating-content">
-            <div class="rating-stars">
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-              <img src="image/icon/star-rate-rounded_.png" alt="Estrela" />
-            </div>
-
-            <div class="name-rating">
-              <h6>Josseana da Silva</h6>
-            </div>
-
-            <div class="info-person-rating">
-              <p>
-                Excelente clínica! Desde o primeiro contato, fui atendido com
-                profissionalismo e gentileza.
-              </p>
-            </div>
-          </div>
-        </div>
-
         <div class="counter">
+          <div class="arrow-prev">
+            <button>
+              <img src="image/icon/arrow-back-ios-new_.png" alt="Anterior" />
+            </button>
+          </div>
           <div class="number-page">
             <h2>1</h2>
           </div>
           <div class="arrow-next">
             <button>
-              <img src="image/icon/arrow-forward-ios_.png" alt="Estrela" />
+              <img src="image/icon/arrow-forward-ios_.png" alt="Próximo" />
             </button>
           </div>
         </div>
       </section>
+      <!-- ENTRE EM CONTATO DESKTOP -->
+      <section class="contact-section">
+        <h2>Entre em contato</h2>
+        <div class="contact-container">
+          <!-- Coluna Esquerda -->
+          <div class="location">
+            <h3>Localização</h3>
+            <address>
+              Rua - Fulana de tal, 9999<br />
+              CEP 99999-999<br />
+              Pindorama/SP
+            </address>
+            <img
+              src="/image/map/image 1.png"
+              alt="Mapa da localização"
+              class="map"
+            />
+            <!-- Redes Sociais -->
+            <div class="social-media-desktop">
+              <a href="#" class="social-item">
+                <img src="/image/icon/whatsapp_.png" alt="WhatsApp" />
+                <span>(99) 99999-9999</span>
+              </a>
+              <a href="#" class="social-item">
+                <img src="/image/icon/instagram_.png" alt="Instagram" />
+                <span>@PindoramaClinica</span>
+              </a>
+              <a href="#" class="social-item">
+                <img src="/image/icon/facebook_.png" alt="Facebook" />
+                <span>PindoramaClinica</span>
+              </a>
+            </div>
+          </div>
+          <!-- Coluna Direita -->
+          <form class="contact-form">
+            <label for="name">Nome</label>
+            <input type="text" id="name" />
+            <label for="lastname">Sobrenome</label>
+            <input type="text" id="lastname" />
+            <label for="email">E-mail</label>
+            <input type="email" id="email" />
+            <label for="message">Mensagem</label>
+            <textarea id="message" rows="5"></textarea>
+            <button type="submit">ENVIAR</button>
+          </form>
+        </div>
+      </section>
 
-      <!-- Entre em contato -->
-      <section class="contact">
+      <!-- Entre em contato mobile -->
+      <section class="contact-mobile">
         <div class="title-contact">
           <h2>Entre em Contato</h2>
         </div>
-
         <form class="form-contact">
           <label for="nome">Nome</label>
           <input type="text" id="nome" name="nome" required />
-
           <label for="sobrenome">Sobrenome</label>
           <input type="text" id="sobrenome" name="sobrenome" required />
-
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required />
-
           <label for="mensagem">Mensagem</label>
           <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
           <button type="submit">ENVIAR</button>
         </form>
       </section>
     </main>
-
     <!-- SOCIAL -->
-
     <div class="social-media">
       <div class="icon">
         <a href="#" class="social-icon">
@@ -348,21 +525,18 @@
           <img src="image/icon/instagram_.png" alt="Ícone do Instagram" />
         </a>
       </div>
-
       <div class="icon">
         <a href="#" class="social-icon">
           <img src="image/icon/facebook_.png" alt="Ícone do Facebook" />
         </a>
       </div>
     </div>
-
     <!-- Rodapé -->
     <footer class="footer">
       <div class="top-footer">
         <div class="logo-footer">
-          <img src="" alt="Logo Pindorama" />
+          <img src="/image/logo/logo.png" alt="Logo Pindorama" />
         </div>
-
         <div class="content-footer">
           <ul class="list-1">
             <li class="title">NOSSOS SERVIÇOS</li>
@@ -371,7 +545,6 @@
             <li>NOSSOS SERVIÇOS</li>
           </ul>
         </div>
-
         <div class="content-footer">
           <ul class="list-2">
             <li class="title">INSTITUCIONAL</li>
@@ -380,17 +553,17 @@
             <li>UNECT JR</li>
           </ul>
         </div>
-
         <div class="content-footer">
           <ul class="list-3">
             <li class="title">NOSSOS CONTATOS</li>
-            <li><img src="" alt="Logo WhatsApp" /></li>
-            <li><img src="" alt="Logo Instagram" /></li>
-            <li><img src="" alt="Logo Facebook" /></li>
+            <li class="icons">
+              <img src="image/icon/whatsapp_.png" alt="Logo WhatsApp" />
+              <img src="image/icon/instagram_.png" alt="Logo Instagram" />
+              <img src="image/icon/facebook_.png" alt="Logo Facebook" />
+            </li>
           </ul>
         </div>
       </div>
-
       <div class="bottom-footer">
         <h6>UNECT JR - TODOS OS DIREITOS RESERVADOS</h6>
       </div>
