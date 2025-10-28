@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="scripts.js" defer></script>
 
     <title>Document</title>
@@ -65,64 +65,73 @@
           </div>
         </div>
       </section>
+
       <section class="campanhas">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="carousel-first">
-                <img src="/image/animal/pata.png" alt="pata" />
-                <img src="image/icon/seringa.png" alt="seringa" />
-                <img src="/image/animal/pata.png" alt="pata" />
-                <h1>Campanha de vacinação</h1>
-                <h2>Nos dias 19 a 28 de novembro</h2>
-                <button>Saiba mais</button>
-                <img src="/image/animal/cat.png" alt="gato" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="carousel-secound">
-                <h1>Campanha de adoção</h1>
-                <h2>
-                  Dê um lar cheio de amor a quem só quer te fazer feliz!<br />
-                  Adote um amigo de quatro patas e transforme sua <br />
-                  vida e a dele.
-                </h2>
-                <button>Saiba mais</button>
-                <img src="image/animal/dog golden.png" alt="cachorro" />
-                <img src="/image/animal/gato hidden.png" alt="gato" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="carousel-third">
-                <img src="image/icon/guarda chuva.png" alt="guarda-chuva" />
-                <h1>Banho e tosa: cuidado e saúde para seu pet</h1>
-                <h2>
-                  Nossa clínica dispõe do serviço de higiene para seu Pet <br />
-                  permanecer limpo, cheiroso e longe de parasitas.
-                </h2>
-                <button>Saiba mais</button>
-                <img src="image/background-img/rain.png" alt="chuva" />
-                <img src="/image/animal/gato banho.png" alt="gato banho" />
-              </div>
+        <div class="slideshow-container">
+          <!-- Slide 1 -->
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <div class="carousel-first">
+              <img src="/image/animal/pata.png" alt="pata" />
+              <img src="image/icon/seringa.png" alt="seringa" />
+              <img src="/image/animal/pata.png" alt="pata" />
+              <h1>Campanha de vacinação</h1>
+              <h2>Nos dias 19 a 28 de novembro</h2>
+              <button>Saiba mais</button>
+              <img src="/image/animal/cat.png" alt="gato" />
             </div>
           </div>
+
+          <!-- Slide 2 -->
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <div class="carousel-secound">
+              <h1>Campanha de adoção</h1>
+              <h2>
+                Dê um lar cheio de amor a quem só quer te fazer feliz!<br />
+                Adote um amigo de quatro patas e transforme sua <br />
+                vida e a dele.
+              </h2>
+              <button>Saiba mais</button>
+              <img src="image/animal/dog golden.png" alt="cachorro" />
+              <img src="/image/animal/gato hidden.png" alt="gato" />
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <div class="carousel-third">
+              <img src="image/icon/guarda chuva.png" alt="guarda-chuva" />
+              <h1>Banho e tosa: cuidado e saúde para seu pet</h1>
+              <h2>
+                Nossa clínica dispõe do serviço de higiene para seu Pet <br />
+                permanecer limpo, cheiroso e longe de parasitas.
+              </h2>
+              <button>Saiba mais</button>
+              <img src="image/background-img/rain.png" alt="chuva" />
+              <img src="/image/animal/gato banho.png" alt="gato banho" />
+            </div>
+          </div>
+
+          <!-- Botões de navegação -->
+          <a class="prev" onclick="plusSlides(-1)">
+            <img src="/image/icon/arrow-back-ios-new_.png" alt="Voltar" />
+          </a>
+          <a class="next" onclick="plusSlides(1)">
+            <img src="/image/icon/arrow-forward-ios_.png" alt="Avançar" />
+          </a>
         </div>
 
-        <!-- Controles -->
-        <div class="swiper-controls">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
+        <!-- Dots -->
+        <br />
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
       </section>
 
-      <!-- Swiper CSS -->
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-      />
       <!-- Parte Principal do mobile -->
       <section class="first-section-mobile">
         <div class="title-first-section">
